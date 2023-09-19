@@ -1,15 +1,10 @@
-html,
-body {
-    height: 100vh;
-    width: 100vw;
-}
 
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 
 /* UNIVERSAL SELECTOR */
 * {
-    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
-    Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-family: 'Mooli','Ubuntu', sans-serif;
     /** It will remove all default 
     ** margins and paddings */
     margin: 0;
@@ -24,15 +19,10 @@ html {
 
 /* || ROOT || */
 :root {
-    --dark: #2d374e;
-	--darker: #1F2937;
-	--darkest: #111827;
-	--grey: #7183a5;
-	--pink: #EC4899;
-	--purple: #8B5CF6;
-	--light: #EEE;
+    --backgound: #0f1e27;
+	--font: whitesmoke;
+    --credit: #b9bcc2;
 }
-
 
 body {
     display: flex;
@@ -40,8 +30,8 @@ body {
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    color: whitesmoke;
-    background: #0f1e27;
+    color: var(--font);
+    background: var(--backgound);
 }
 
 .root {
@@ -52,8 +42,6 @@ body {
     flex-direction: column;
 }
 
-
-
 main {
 	width: 100%;
     flex-grow: 1;
@@ -62,8 +50,6 @@ main {
     align-items: center;
 
 }
-
-
 
 header,
 footer {
@@ -75,11 +61,11 @@ footer {
 
 
 
+
+
 h1 {
-    font-family: 'Roboto', sans-serif;
     font-weight: 100;
-    font-size: 2.6em;
-    text-transform: uppercase;
+    font-size: 2.2rem;
 }
 
 #seconds,
@@ -89,29 +75,37 @@ h1 {
 }
 
 .btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     white-space: nowrap;
 }
 
 button {
     border-radius: 5px;
-    background: #0f1e27;
-    color: white;
-    border: solid 1px white;
+    background: var(--backgound);
+    color: var(--font);
+    border: solid 1px var(--font);
     text-decoration: none;
     cursor: pointer;
-    font-size: 1.2em;
-    padding: 1rem 0;
-    width: 160px;
+    font-size: 1.2rem;
+    width: 20%;
+    aspect-ratio: 5/2;
     margin: 10px;
     outline: none;
     transition: all 250ms ease-in-out;
 }
 
 button:hover {
-    background: white;
-    border: solid 1px #0f1e27;
-    color: #0f1e27;
+    background: var(--font);
+    border: solid 1px var(--backgound);
+    color: var(--backgound);
 }
+
+
+
+
+
 
 
 
@@ -119,7 +113,7 @@ button:hover {
 
 
 footer .credit {
-    color: #9c9fa5;
+    color: var(--credit);
     cursor: pointer;
     text-decoration: none;
 }
@@ -127,18 +121,11 @@ footer .credit {
 footer div {
     height: 1px;
     width: 90%;
-    background-color: #9c9fa5;
+    background-color: var(--credit);
     margin-bottom: 1rem;
 }
 
 
 
-/* --  > 576 px px  */
-@media only screen and (max-width: 576px) {
-
-    html {
-        font-size: 75%;
-    }
-}
 
 
