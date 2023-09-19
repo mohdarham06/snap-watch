@@ -4,24 +4,78 @@ body {
     width: 100vw;
 }
 
-body {
-    background: #0f1e27;
+
+
+/* UNIVERSAL SELECTOR */
+* {
     font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
-        Helvetica, Arial, 'Lucida Grande', sans-serif;
+    Helvetica, Arial, 'Lucida Grande', sans-serif;
+    /** It will remove all default 
+    ** margins and paddings */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.wrapper {
-    width: 800px;
-    margin: 30px auto;
-    color: white;
-    text-align: center;
-    border-width: 10px;
-    border-color: red;
+html {
+    font-size: 100%;
 }
 
-h1,
-h2,
-h3 {
+
+/* || ROOT || */
+:root {
+    --dark: #2d374e;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #7183a5;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    color: whitesmoke;
+    background: #0f1e27;
+}
+
+.root {
+    width: 100%;
+    max-width: 800px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+main {
+	width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+
+header,
+footer {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     font-size: 2.6em;
@@ -34,6 +88,10 @@ h3 {
     font-size: 2em;
 }
 
+.btn-container {
+    white-space: nowrap;
+}
+
 button {
     border-radius: 5px;
     background: #0f1e27;
@@ -42,11 +100,11 @@ button {
     text-decoration: none;
     cursor: pointer;
     font-size: 1.2em;
-    padding: 18px 10px;
-    width: 180px;
+    padding: 1rem 0;
+    width: 160px;
     margin: 10px;
     outline: none;
-    transition: all 250ms;
+    transition: all 250ms ease-in-out;
 }
 
 button:hover {
@@ -55,16 +113,32 @@ button:hover {
     color: #0f1e27;
 }
 
-.credits {
-    font-size: 10px;
-    color: grey;
-    font-style: italic;
+
+
+
+
+
+footer .credit {
+    color: #9c9fa5;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-.credits a {
-    color: grey;
+footer div {
+    height: 1px;
+    width: 90%;
+    background-color: #9c9fa5;
+    margin-bottom: 1rem;
 }
 
 
+
+/* --  > 576 px px  */
+@media only screen and (max-width: 576px) {
+
+    html {
+        font-size: 75%;
+    }
+}
 
 
