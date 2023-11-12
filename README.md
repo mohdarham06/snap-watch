@@ -1,4 +1,4 @@
-# snap-watch
+# SnapWatch
 
 SnapWatch is a minimalist stopwatch application for quick and precise timekeeping. 
 
